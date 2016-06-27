@@ -35,7 +35,7 @@ Here is the tutorial to install cygwin correctly to be sure NetScript works :
 	<li>Look for the "Devel" row and click on the double-arrow drawing on it to display the word "Install" instead of "Default" next to it. Click "Next" ;</li>
 	<li>If a "Resolving Dependencies" window appears, tick the "Select Required Packages" box, then click "Next". The cygwin setup should be launched...</li>
 </ol>
-<strong>Thank you for using NetScript !</strong>
+<strong>Thank you for using NetScript !</strong><br/>
 <em>Please give credits when you use NetScript.</em>
 
 <em>*** Readme Version : 20160627-1.2 ***</em>
