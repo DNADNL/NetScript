@@ -1,4 +1,4 @@
-<h1> NetScript </h1>
+<h1>NetScript</h1>
 <em>A script to compile automatically NetSurf for AmigaOS3 (Cross-compilation Windows using Cygwin - AmigaOS3)</em>
 
 <h2>Important information</h2>
@@ -38,5 +38,5 @@ Here is the tutorial to install cygwin correctly to be sure NetScript works :
 <strong>Thank you for using NetScript !</strong><br/>
 <em>Please give credits when you use NetScript.</em>
 
-<em>*** Readme Version : 20160627-1.2 ***</em>
+<em>*** Readme Version : 20160627-1.4 ***</em>
 
