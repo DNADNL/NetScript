@@ -7,8 +7,27 @@ echo "                                               "
 echo "                A big thanks to                "
 echo "    Chris Young and the amiga.org forums !     "
 echo "                                               "
-echo "     *** Script Version : 20160627-1 ***       "
+echo "     *** Script Version : 20160627-2 ***       "
 echo "-----------------------------------------------"
+
+while [ \( "$duktape" != "Y" -a "$duktape" != "N" \) -a \( "$duktape" != "y" -a "$duktape" != "n" \) ]
+do read -p "Do you want to compile NetSurf with duktape ?(Y/N) : " duktape
+done
+
+if [ "$duktape" = "Y" -o "$duktape" = "y" ]
+then 
+echo "                                               "
+echo "-----------------------------------------------"
+echo "  You choosed to compile NetSurf WITH DukTape  "
+echo "-----------------------------------------------"
+echo "                                               "
+else
+echo "                                                "
+echo "------------------------------------------------"
+echo " You choosed to compile NetSurf WITHOUT DukTape "
+echo "------------------------------------------------"
+echo "                                                "
+fi
 
 echo "Verifying gcc-tools... "
 if [ ! -d "/opt/gcc-tools" ]
@@ -148,8 +167,26 @@ git clone git://git.netsurf-browser.org/netsurf.git
 cd netsurf/
 git pull
 make TARGET=amigaos3 PREFIX=/opt/netsurf/m68k-unknown-amigaos/env CC=m68k-unknown-amigaos-gcc clean
+
+if [ "$duktape" = "Y" -o "$duktape" = "y" ]
+then 
+echo "                                               "
+echo "-----------------------------------------------"
+echo "                   REMINDER                    "
+echo "  You choosed to compile NetSurf WITH DukTape  "
+echo "-----------------------------------------------"
+echo "                                               "
+else
+echo "                                                "
+echo "------------------------------------------------"
+echo "                    REMINDER                    "
+echo " You choosed to compile NetSurf WITHOUT DukTape "
+echo "------------------------------------------------"
+echo "                                                "
 echo override NETSURF_USE_DUKTAPE := NO >> Makefile.config.example
 cp Makefile.config.example Makefile.config
+fi
+
 make TARGET=amigaos3 PREFIX=/opt/netsurf/m68k-unknown-amigaos/env CC=m68k-unknown-amigaos-gcc 
 cd ..
 cp -R dataFiles/resources/* netsurf/resources/

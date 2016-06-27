@@ -3,7 +3,7 @@
 
 <h2>Important information</h2>
 To use NetScript, you need Cygwin installed into your computer with all the developer tools. A tutorial to install cygwin is available below.
-For the moment, this version doesn`t include DukTape, as there are some issues with it.
+This version includes the choice to compile NetSurf with or without DukTape, as there are some issues with it.
 
 <h2>How to use NetScript ?</h2>
 Here is the tutorial to make it work :
@@ -38,5 +38,5 @@ Here is the tutorial to install cygwin correctly to be sure NetScript works :
 <strong>Thank you for using NetScript !</strong><br/>
 <em>Please give credits when you use NetScript.</em>
 
-<em>*** Readme Version : 20160627-1.4 ***</em>
+<em>*** Readme Version : 20160627-2 ***</em>
 
