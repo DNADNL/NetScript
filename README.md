@@ -1,8 +1,5 @@
 <h1> NetScript </h1>
 <em>A script to compile automatically NetSurf for AmigaOS3 (Cross-compilation Windows using Cygwin - AmigaOS3)</em>
-<hl>
-<strong>Hello and thank you for using NetScript !</strong>
-
 
 <h2>Important information</h2>
 To use NetScript, you need Cygwin installed into your computer with all the developer tools. A tutorial to install cygwin is available below.
@@ -12,7 +9,7 @@ For the moment, this version doesn`t include DukTape, as there are some issues w
 Here is the tutorial to make it work :
 <ol>
 	<li>Extract the RAR archive into a folder located in your personal directory ; <br/>
-	<em>If you don`t change the cygwin install directory, it`s probably C:\cygwin\home\*Name of your windows session²</em></li>
+	<em>If you don`t change the cygwin install directory, it`s probably C:\cygwin\home\*Name of your windows session*</em></li>
 	<li>Open Cygwin and Move to the directory containing the files (via the cd command) ;</li>
 	<li>Use this command to start NetScript : ./letsStart.sh ;</li>
 </ol>
@@ -38,6 +35,8 @@ Here is the tutorial to install cygwin correctly to be sure NetScript works :
 	<li>Look for the "Devel" row and click on the double-arrow drawing on it to display the word "Install" instead of "Default" next to it. Click "Next" ;</li>
 	<li>If a "Resolving Dependencies" window appears, tick the "Select Required Packages" box, then click "Next". The cygwin setup should be launched...</li>
 </ol>
-<strong>Please give credits when you use NetScript.</strong>
-<em>Readme Version : 20160627-1.1</em>
+<strong>Thank you for using NetScript !</strong>
+<em>Please give credits when you use NetScript.</em>
+
+<em>*** Readme Version : 20160627-1.2 ***</em>
 
