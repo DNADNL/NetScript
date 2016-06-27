@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>NetSurf | About NetSurf</title>
+<link rel="stylesheet" type="text/css" href="/netsurf.css">
+<link rel="icon" type="image/png" href="/webimages/favicon.png">
+</head>
+
+<body>
+<p class="banner"><a href="/"><img src="/netsurf.png" alt="NetSurf"></a></p>
+
+<div class="navigation">
+<div class="navsection">
+<ul>
+<li><a href="/about/">About NetSurf</a>
+<ul>
+<li><a href="/about/news">News</a></li>
+<li><a href="/about/screenshots/">Screenshots</a></li>
+<li><a href="/about/team">Team</a></li>
+<li><a href="/about/awards">Awards</a></li>
+<li><a href="/about/licence">Licence</a></li>
+<li><a href="/about/thanks">Thanks</a></li>
+</ul>
+</li>
+<li><a href="/downloads/">Downloads</a></li>
+<li><a href="/documentation/">Documentation</a></li>
+<li><a href="/developers/">Development area</a></li>
+<li><a href="/webmasters/">Webmaster area</a></li>
+<li><a href="/contact/">Contact</a></li>
+</ul>
+</div>
+
+<div class="navsection">
+<ul class="languages">
+<!--<li><a href="index.de">Deutsch</a></li>-->
+<li>English</li>
+<!--<li><a href="index.fr">Français</a></li>-->
+<!--<li><a href="index.nl">Nederlands</a></li>-->
+</ul>
+</div>
+
+<div class="navsection">
+<ul class="sitelinks">
+<li><a href="http://wiki.netsurf-browser.org/">Development wiki</a></li>
+<li><a href="http://source.netsurf-browser.org/">Git repository viewer</a></li>
+<li><a href="http://ci.netsurf-browser.org/">Continuous Integration</a></li>
+<li><a href="http://bugs.netsurf-browser.org/">Bug report system</a></li>
+</ul>
+</div>
+
+</div>
+
+<div class="content">
+
+<p class="breadcrumbs"><a href="/">Home</a> » About NetSurf</p>
+
+<h1>About NetSurf</h1>
+
+<p>NetSurf is a free, open source web browser. It is written in C and released under the GNU Public Licence version 2. NetSurf has its own layout and rendering engine entirely written from scratch. It is small and capable of handling many of the web standards in use today.</p>
+
+<div class="leftcol">
+
+<h2 id="ProjectGoals">Project Goals</h2>
+
+<p>The NetSurf project's goals and aims are:</p>
+
+<dl class="projectgoals">
+<dt>Have fun</dt>
+<dd>NetSurf is developed in people's spare time, so our main goal is to have fun &ndash; hopefully learning something and creating a product that people find useful along the way. If you want to join in, check out the <a href="/developers/">developer and contributor area</a>!</dd>
+<dt>Adhere to the standards</dt>
+<dd>There are many web standards. HTTP, HTML and CSS are just a few of them, and new specifications appearing all the time. The NetSurf team is devoted to implementing these standards.</dd>
+<dt>Superior user experience</dt>
+<dd>We want NetSurf to provide a consistent interface to the user that fits right in with your desktop environment. We aim to make NetSurf's interface clean and simple while providing access to powerful functionality.</dd>
+<dt>Keep NetSurf small</dt>
+<dd>NetSurf is a web browser with a small footprint, and we want to keep it that way.</dd>
+<dt>Portability</dt>
+<dd>We want NetSurf to be available to as many users as possible. We've already seen ports to handheld devices and would like to help anyone attempting a new port.</dd>
+<dt>Modularity</dt>
+<dd>Many of of the components designed for NetSurf are <a href="/projects/">available separately</a>, so that others might use them in their own projects.</dd>
+</dl>
+
+<h2 id="ProjectHistory">Project History</h2>
+
+<p>The NetSurf project was started in April 2002 in response to a discussion of the deficiencies of the RISC OS browsers that were available at the time. NetSurf has been developed continuously ever since. The latest features and bug fixes have always been available immediately to users through the project's <a href="http://ci.netsurf-browser.org/">autobuilder</a>. NetSurf had become the most widely used browser on RISC OS well before NetSurf's first release, version 1.0, on 17th May 2007. Development builds have continued to be more widely used than release versions by RISC OS users.</p>
+
+<div class="frontscreen"><p class="frontscreen"><a href="/webimages/oldnetsurf.png"><img src="/webimages/oldnetsurf_t.png" alt="Screenshot of an ancient NetSurf version."></a> <span>An old version from April 2004 displaying the <em>Drobe</em> web site in March 2009.</span></p></div>
+
+<p>A GTK port was started in June 2004, which runs on Unix-like platforms. Initially this port was created in order to aid the development and testing of the RISC OS version. Over time, the GTK port has become a fully fledged part of the project and cemented NetSurf's commitment to portability.</p>
+
+<div class="window">
+<p class="throbber"><img src="/webimages/oldthrobber.gif" alt="Old NetSurf throbber animation."></p>
+<p class="throbber">NetSurf's exuberant throbber animation in 2004.</p>
+</div>
+
+<p>NetSurf has now been ported to many more platforms with native front ends being created for BeOS &amp; Haiku, as well as AmigaOS 4. A dumb framebuffer port also exists, which has no particular operating system or GUI toolkit requirements.</p>
+
+<h3>Timeline</h3>
+
+<p>Some of the major events and changes in the project's history are chronicled below.</p>
+
+<table class="timeline">
+<tr><th>Apr 2002</th><td>NetSurf project started</td></tr>
+<tr><th>Jun 2004</th><td>GTK port available</td></tr>
+<tr><th>May 2007</th><td>NetSurf 1.0 released</td></tr>
+<tr><th>Jun 2007</th><td>NetSurf packaged in Debian</td></tr>
+<tr><th>Jun 2007</th><td>Hubbub HTML parser started</td></tr>
+<tr><th>Jul 2007</th><td>LibDOM DOM implementation started</td></tr>
+<tr><th>Aug 2007</th><td>NetSurf 1.1 released</td></tr>
+<tr><th>Jan 2008</th><td>NetSurf web site redesigned and rewritten</td></tr>
+<tr><th>Mar 2008</th><td>NetSurf 1.2 released</td></tr>
+<tr><th>May 2008</th><td>LibCSS CSS parser started</td></tr>
+<tr><th>Jun 2008</th><td>BeOS &amp; Haiku port available</td></tr>
+<tr><th>Aug 2008</th><td>AmigaOS 4 port available</td></tr>
+<tr><th>Aug 2008</th><td>Hubbub used in NetSurf builds</td></tr>
+<tr><th>Sep 2008</th><td>Framebuffer port available</td></tr>
+<tr><th>Apr 2009</th><td>NetSurf 2.0 released</td></tr>
+<tr><th>May 2009</th><td>NetSurf 2.1 released</td></tr>
+<tr><th>Jul 2009</th><td>LibCSS used in NetSurf builds</td></tr>
+<tr><th>Mar 2010</th><td>New cache designed and used in NetSurf</td></tr>
+<tr><th>Apr 2010</th><td>NetSurf 2.5 released</td></tr>
+<tr><th>Sep 2010</th><td>NetSurf 2.6 released</td></tr>
+<tr><th>Jan 2011</th><td>Atari port available</td></tr>
+<tr><th>Jan 2011</th><td>Mac OS X port available</td></tr>
+<tr><th>Apr 2011</th><td>NetSurf 2.7 released</td></tr>
+<tr><th>Sep 2011</th><td>Frames and iframes in NetSurf core</td></tr>
+<tr><th>Sep 2011</th><td>NetSurf 2.8 released</td></tr>
+<tr><th>Mar 2012</th><td>LibDOM used in NetSurf builds</td></tr>
+<tr><th>Apr 2012</th><td>NetSurf 2.9 released</td></tr>
+<tr><th>Sep 2012</th><td>Early JavaScript support started</td></tr>
+<tr><th>Feb 2013</th><td>Textarea widget used for HTML forms</td></tr>
+<tr><th>Apr 2013</th><td>NetSurf 3.0 released</td></tr>
+<tr><th>Sep 2013</th><td>Redesigned treeviews</td></tr>
+<tr><th>Dec 2013</th><td>Big LibCSS selection speedup</td></tr>
+<tr><th>Apr 2014</th><td>NetSurf 3.1 released</td></tr>
+<tr><th>May 2014</th><td>Added disc cache feature</td></tr>
+<tr><th>Aug 2014</th><td>NetSurf 3.2 released</td></tr>
+<tr><th>Mar 2015</th><td>NetSurf 3.3 released</td></tr>
+<tr><th>Aug 2015</th><td>Changed JavaScript engine to Duktape</td></tr>
+<tr><th>Feb 2016</th><td>NetSurf 3.4 released</td></tr>
+</table>
+
+<div class="frontscreen"><p class="frontscreen"><a href="screenshots/images/riscos-wikipedia.png"><img src="screenshots/images/riscosthumb-wikipedia.png" alt="GTK NetSurf screenshot."></a> <span>A more recent NetSurf showing <em>Wikipedia</em>.</span></p></div>
+
+<p>Get the latest version from our <a href="/downloads/">download</a> section.</p>
+
+</div>
+
+<div class="rightcol">
+<div>
+
+<h2 id="PortsAvailability">Ports &amp; Availability</h2>
+
+<p>This section explains the various NetSurf front ends and should cover whether NetSurf is available for your system. NetSurf currently has seven different front ends. These are for RISC OS, GTK, BeOS, AmigaOS, Atari, Mac OS X and dumb framebuffers.</p>
+
+<h3>Desktop front ends</h3>
+
+<p>The RISC OS front end is suitable for RISC OS 4 and greater. The AmigaOS front end is suitable for AmigaOS 4. The BeOS front end works on BeOS, Zeta and Haiku. The Mac OS X port requires at least version 10.5.</p>
+
+<div class="frontscreen"><p class="frontscreen"><a href="screenshots/images/gtk-bbc.png"><img src="screenshots/images/gtkthumb-bbc.png" alt="GTK NetSurf screenshot."></a> <span>NetSurf's GTK front end showing the <em>BBC Homepage</em>.</span></p></div>
+
+<p>NetSurf's GTK front end works on Unix-like systems, including Linux, FreeBSD, NetBSD, Solaris and others. There are no native Windows or MacOS X ports of NetSurf at the moment, however the GTK front end can be built for those platforms. The GTK front end is available from the package repositories of many Linux distributions including Debian and Ubuntu.</p>
+
+<h3>Framebuffer front end</h3>
+
+<p>NetSurf's framebuffer front end has no particular operating system or GUI toolkit requirements. Its mouse pointer, all its widgets etc, are drawn though NetSurf's internal plotters, the same rendering interface used to draw web pages. This makes the framebuffer front end highly portable. Currently the framebuffer front end can target the following framebuffer surface providers:</p>
+
+<dl>
+<dt>The Linux framebuffer</dt>
+<dd>Output to a Linux framebuffer and input from Linux input event device nodes. The output device may be specified and defaults to <code style="color:#46a;">/dev/fb0</code>. The input node search path may also be specified, and defaults to <code style="color:#46a;">/dev/input/</code>.</dd>
+<dt>SDL</dt>
+<dd>The SDL surface is a straightforward port to the SDL library which is available for many operating systems. This allows the framebuffer NetSurf front end to be run inside a desktop window, making development easier.</dd>
+<dt>X</dt>
+<dd>The X surface uses the XCB. This allows the framebuffer NetSurf front end to be run inside an X desktop window, making development easier.</dd>
+<dt>VNC</dt>
+<dd>The VNC server surface uses the libvncserver library to provide a straightforward unsecured VNC server. Multiple clients may connect.</dd>
+<dt>The ABLE framebuffer</dt>
+<dd>This surface handler enables NetSurf's framebuffer front end to run directly on the ABLE bootloader, shipped with hardware from Simtec.</dd>
+</dl>
+
+<h3>Releases vs Development trunk</h3>
+
+<p>Users can run our release versions of NetSurf, or they can run development versions. Our release versions are tested and released when we are happy with them. Development versions are snapshots of the current state of the code, as the developers are working on it. These versions may have newer features or bug fixes that haven't made it into a release yet, however (depending on what the developers are doing) they might also have new bugs, instability, or they may produce reams of debugging output.</p>
+
+<p>We recommend users use the release versions, unless they particularly want to help us by reporting issues with development versions. People building NetSurf from source are encouraged to build the current HEAD, rather than a release, as it is most up-to-date and has features that may not yet have been released.</p>
+
+<h2 id="NetSurfInAction">NetSurf in Action</h2>
+
+<p>Since NetSurf started out on RISC OS hardware, which is not particularly fast &ndash; the most widely used RISC OS hardware is a 200 MHz StrongARM RiscPC &ndash; so it runs well on resource constrained hardware such as handhelds. Even on fast modern desktops, users benefit from NetSurf's efficiency through its fast startup time and lightweight approach.</p>
+
+<p style="text-align:center;overflow:hidden;"><img src="/webimages/depicture.jpg" alt="Photo of NetSurf running on a Simtec DePicture."></p>
+
+<p>The image above shows NetSurf's framebuffer front end running on top of a Simtec <a href="http://www.simtec.co.uk/products/BBD20EUROU/">DePicture</a>'s bootloader! It's using an ARM9-based Samsung S3C2440 CPU running at 400 MHz.</p>
+
+<p>People also use NetSurf on other handheld gadgets, such as the Openmoko mobile phone and the Nokia N810 internet tablet. NetSurf's full page scaling abilities help it to make the best use of a small screen.</p>
+
+<h2 id="WantToHelp">Want to help?</h2>
+
+<p>The NetSurf project needs help and input if it is to keep moving forward. There are many ways for users to contribute to the NetSurf project. One of the simplest is to try the latest development build regularly. If you find any bugs, features you like or changes you don't like you can give feedback to the developers. It is this valuable feedback that helps shape NetSurf into a program people enjoy using.</p>
+
+<p>Visit the &quot;<a href="/developers/contribute">How can I help?</a>&quot; page to see other ideas for contributing to the project. If you can program and you'd like to improve NetSurf, then we'd love to hear from you. Pick an area you'd like to improve or a feature you want to add and <a href="/contact/">contact the developers</a>. Also, take a look at the <a href="/developers/">developer and contributor</a> area of this site.</p>
+
+</div>
+</div>
+
+
+<div class="footer">
+<p>Copyright 2003 - 2014 The NetSurf Developers</p>
+</div>
+
+</div>
+
+
+<form method="get" action="http://www.google.co.uk/search">
+<div class="searchbox">
+<input type="hidden" name="q" value="site:netsurf-browser.org">
+<input type="text" name="q" maxlength="255"><br>
+<input type="submit" value="Search" name="btnG">
+</div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>NetSurf | The NetSurf Developers</title>
+<link rel="stylesheet" type="text/css" href="/netsurf.css">
+<link rel="icon" type="image/png" href="/webimages/favicon.png">
+</head>
+
+<body>
+<p class="banner"><a href="/"><img src="/netsurf.png" alt="NetSurf"></a></p>
+
+<div class="navigation">
+<div class="navsection">
+<ul>
+<li><a href="/about/">About NetSurf</a>
+<ul>
+<li><a href="/about/news">News</a></li>
+<li><a href="/about/screenshots/">Screenshots</a></li>
+<li><a href="/about/team">Team</a></li>
+<li><a href="/about/awards">Awards</a></li>
+<li><a href="/about/licence">Licence</a></li>
+<li><a href="/about/thanks">Thanks</a></li>
+</ul>
+</li>
+<li><a href="/downloads/">Downloads</a></li>
+<li><a href="/documentation/">Documentation</a></li>
+<li><a href="/developers/">Development area</a></li>
+<li><a href="/webmasters/">Webmaster area</a></li>
+<li><a href="/contact/">Contact</a></li>
+</ul>
+</div>
+
+<div class="navsection">
+<ul class="languages">
+<!--<li><a href="index.de">Deutsch</a></li>-->
+<li>English</li>
+<!--<li><a href="index.fr">Français</a></li>-->
+<!--<li><a href="index.nl">Nederlands</a></li>-->
+</ul>
+</div>
+
+<div class="navsection">
+<ul class="sitelinks">
+<li><a href="http://wiki.netsurf-browser.org/">Development wiki</a></li>
+<li><a href="http://source.netsurf-browser.org/">Git repository viewer</a></li>
+<li><a href="http://ci.netsurf-browser.org/">Continuous Integration</a></li>
+<li><a href="http://bugs.netsurf-browser.org/">Bug report system</a></li>
+</ul>
+</div>
+
+</div>
+
+<div class="content">
+
+<p class="breadcrumbs"><a href="/">Home</a> » <a href="/about/">About NetSurf</a> » The NetSurf Developers</p>
+
+<h1>The NetSurf Developers</h1>
+
+<h2>John-Mark Bell</h2>
+
+<p>John-Mark spends most of his time avoiding the layout engine, as he thinks that overexposure to it will result in the early onset of dementia. Over the years, he has contributed to a number of areas of NetSurf &ndash; particularly anything that doesn't involve touching any user interface code. He is also responsible for creating many of the project's core libraries.</p>
+
+<ul>
+<li>First check in: 25 May 2003</li>
+<li>IRC name: jmb</li>
+</ul>
+
+<h2>Michael Drake</h2>
+
+<p>Michael is involved most in developing the layout and rendering engine. He wrote the treeview implementation and the current bookmarks, history and cookie managers. He also contributes to other areas of the NetSurf core and project libraries. When he is induced to work on platform specific code, it is typically to address interaction with the core, or to implement, fix, or improve performance of front end rendering code.</p>
+
+<p>He is responsible for most of the project's web site, and has worked on the project graphics and documentation.</p>
+
+<ul>
+<li>First check in: 26 September 2003</li>
+<li>IRC name: tlsa</li>
+</ul>
+
+<h2>John Tytgat</h2>
+
+<p>John is an occasional NetSurf contributor mostly related to cross-compile build aspects based on his knowledge and involvement in the <a href="http://gccsdk.riscos.info/">GCCSDK</a> project and <a href="http://ro-oslib.sourceforge.net">OSLib</a>. He also contributed the first Unicode related changes in NetSurf.</p>
+
+<p>His RISC OS NetSurf builds are done using the GCCSDK cross-compiler on an Ubuntu Linux desktop machine and tested on RiscPC and A9home.</p>
+
+<ul>
+<li>First check in: 1 May 2004</li>
+<li>IRC name: joty</li>
+</ul>
+
+<h2>Daniel Silverstone</h2>
+
+<p>Generally grumpy, occasionally clever, but consistently ginger; Daniel works mostly on the GTK port of NetSurf and in a more airy hand-wavy way on most of the newer libraries which make up the NetSurf project.</p>
+
+<p>Daniel does most of his development work on his Ubuntu systems and is also half-responsible for the Debian and Ubuntu packaging of the project's output.  Daniel also helps to maintain the server that hosts the project's web site and mailing lists.</p>
+
+<ul>
+<li>First check in: 9 March 2006</li>
+<li>IRC name: Kinnison</li>
+</ul>
+
+<h2>Rob Kendrick</h2>
+
+<p>Rob contributes mainly to the GTK port of NetSurf, and helping with general portability issues between platforms.  He wrote the Cairo rendering back end which gives the GTK port anti-aliased rendering, as well as devising the new themes format.  Also some other minor contributions to the main base of the code.</p>
+
+<p>Rob does most of his development work on his Linux desktop running Ubuntu, and also makes extensive use of an A9home for testing.  He also helps maintain the server that hosts the project's web site and mailing lists.</p>
+
+<ul>
+<li>First check in: 13 March 2006</li>
+<li>IRC name: rjek</li>
+</ul>
+
+<h2>Vincent Sanders</h2>
+
+<ul>
+<li>First check in: 8 August 2007</li>
+<li>IRC name: kyllikki</li>
+</ul>
+
+<h2>Fran&ccedil;ois Revol</h2>
+
+<p>Fran&ccedil;ois is a BeOS fan and Haiku developer. He started porting NetSurf to BeOS to fill the void between Links and Firefox, and to replace the closed-source NetPositive as default browser in Haiku.</p>
+
+<p>He's always rushing to fix C89 breakages since BeOS binaries must be built using gcc 2.95 because of C++ ABI compatibility. Currently Fran&ccedil;ois builds under ZETA (BeOS R6), and tests under Haiku both on real hardware and in QEMU.</p>
+
+<ul>
+<li>First check in: 3 June 2008</li>
+<li>IRC name: mmu_man</li>
+</ul>
+
+<h2>Chris Young</h2>
+
+<p>Chris is responsible for porting NetSurf to AmigaOS 4, to get an all-round decent web browser on the platform rather than having to use several outdated or incomplete ones. He refuses to deal with any of the core code beyond prodding it with a pointy stick when it doesn't quite work as expected.</p>
+
+<p>His development work, testing and compiling is all done on an AmigaOne G4-XE.</p>
+
+<ul>
+<li>First check in: 2 August 2008</li>
+<li>IRC name: chris_y</li>
+</ul>
+
+<h2>Steve Fryatt</h2>
+
+<p>Steve maintains the RISC&nbsp;OS port of NetSurf, having rashly volunteered himself in an attempt to stop the platform losing yet another web browser.  His involvement with the core is limited, not least by the fact that he still hasn't had the time to work out what a lot of it does.</p>
+
+<p>His development work is done on Ubuntu Linux using the GCCSDK for cross-compiling, with testing done on RPCEmu and an Iyonix.</p>
+
+<ul>
+<li>First check in: 14 February 2010</li>
+<li>IRC name: sff, stevef</li>
+</ul>
+
+<h2>Previous team members</h2>
+
+<h3>James Bursa</h3>
+
+<p>James was the original developer of NetSurf.</p>
+
+<ul>
+<li>First check in: 22 April 2002</li>
+<li>IRC name: zamez</li>
+</ul>
+
+<h3>Richard Wilson</h3>
+
+<p>When he found time away from his day job as an international man of mystery, Richard enjoyed flailing his arms towards a keyboard and trying to make NetSurf as beautiful as the contours of a Cuban virgin's thighs.</p>
+
+<p>He was responsible for implementing various sections of NetSurf &ndash; the ones he'll admit to include GIF, BMP and ICO support, the RISC OS frames implementation, minor sections of the CSS and layout code, the old hotlist and global history, the toolbars and themes, URL auto-completion, buffered rendering, interactive help, the RISC&nbsp;OS GUI and image rendering code, RISC&nbsp;OS image virtual memory / compression, and probably 90% of the bugs.</p>
+
+<p>Unfortunately Richard has had precious little time for development work recently, but an aged RiscPC is his partner when he does.</p>
+
+<ul>
+<li>First check in: 9 March 2004</li>
+<li>IRC name: rjwii</li>
+</ul>
+
+<h3>Adrian Lees</h3>
+
+<ul>
+<li>First check in: 25 March 2005</li>
+<li>IRC name: adrianl</li>
+</ul>
+
+<h3>Sven Weidauer</h3>
+
+<p>Sven wrote the Mac OS X front end. His main development machine was an iMac running OS X Snow Leopard and he did some testing on an old PPC iBook running Leopard.</p>
+
+<ul>
+<li>First check in: 12 January 2011</li>
+<li>IRC name: swdr</li>
+</ul>
+
+
+
+<div class="footer">
+<p>Copyright 2003 - 2014 The NetSurf Developers</p>
+</div>
+
+</div>
+
+
+<form method="get" action="http://www.google.co.uk/search">
+<div class="searchbox">
+<input type="hidden" name="q" value="site:netsurf-browser.org">
+<input type="text" name="q" maxlength="255"><br>
+<input type="submit" value="Search" name="btnG">
+</div>
+</form>
+
+</body>
+</html>

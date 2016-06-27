@@ -1,0 +1,1 @@
+s/YYLEX/yylex()/g

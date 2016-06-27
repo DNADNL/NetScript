@@ -1,0 +1,10 @@
+# >PROGDIR:Resources/cookies
+# NetSurf cookies file.
+#
+# Lines starting with a '#' are comments, blank lines are ignored.
+#
+# All lines prior to "Version:	102" are discarded.
+#
+# Version	Domain	Domain from Set-Cookie	Path	Path from Set-Cookie	Secure	HTTP-Only	Expires	Last used	No destroy	Name	Value	Value was quoted	Scheme	URL	Comment
+Version:	102
+0	.google.co.uk	1	/	1	0	1	1475613222	1459787634	0	NID	78=cVmQLKFU0CXl3jXdOI7s038_Zpa7nbqAx0HbksoUJ_TkC4LLkJ2ric6c1WSXNjOIjVqaUG74y7lw0ysGchtJo6DPDQ1DqV_MiajlLppPkNlL8M-b9mZ_pTEzaaxtvNVP	0	unused	unused	
