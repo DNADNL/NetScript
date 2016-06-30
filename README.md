@@ -34,12 +34,12 @@ Here is the tutorial to install cygwin correctly to be sure NetScript works :
 	<li>You can let the default Root Directory and the selected "Install For : All Users" as is (or change it if you need). Click "Next" ;</li>
 	<li>You can let the default Local Package Directory as is (or change it if you need). Click "Next" ;</li>
 	<li>Select "Direct connection", then click "Next" ;</li>
-	<li>Select the "http://cygwin.mirror.constant.com" available download site, then click "Next". Cygwin downloads some packages... ;</li>
+	<li>Select the available download site you want (for example, "http://cygwin.mirror.constant.com"), then click "Next". Cygwin downloads some packages... ;</li>
 	<li>Look for the "Devel" row and click on the double-arrow drawing on it to display the word "Install" instead of "Default" next to it. Click "Next" ;</li>
 	<li>If a "Resolving Dependencies" window appears, tick the "Select Required Packages" box, then click "Next". The cygwin setup should be launched...</li>
 </ol>
 <strong>Thank you for using NetScript !</strong><br/>
 <em>Please give credits when you use NetScript.</em>
 
-<em>*** Readme Version : 20160630-1 ***</em>
+<em>*** Readme Version : 20160630-2 ***</em>
 
