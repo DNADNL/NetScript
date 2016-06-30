@@ -7,36 +7,56 @@ echo "                                               "
 echo "                A big thanks to                "
 echo "    Chris Young and the amiga.org forums !     "
 echo "                                               "
-echo "     *** Script Version : 20160630-1 ***       "
+echo "     *** Script Version : 20160630-2 ***       "
 echo "-----------------------------------------------"
 
-while [ \( "$duktape" != "Y" -a "$duktape" != "N" \) -a \( "$duktape" != "y" -a "$duktape" != "n" \) ]
-do read -p "(1/2) Do you want to compile NetSurf WITH duktape ?(Y/n) : " duktape
+while [ \( "$compileWithDukTape" != "Y" -a "$compileWithDukTape" != "N" \) -a \( "$compileWithDukTape" != "y" -a "$compileWithDukTape" != "n" \) ]
+do read -p "(1/3) Do you want to compile NetSurf WITH DukTape ?(Y/n) : " compileWithDukTape
 done
-while [ \( "$deleteOptNetsurf" != "Y" -a "$deleteOptNetsurf" != "N" \) -a \( "$deleteOptNetsurf" != "y" -a "$deleteOptNetsurf" != "n" \) ]
-do read -p "(2/2) Do you want to KEEP the /opt/netsurf folder at the end of NetScript execution ? If you keep it, the future NetScript executions will be shorter. (Y/n) : " deleteOptNetsurf
+while [ \( "$keepFiles" != "Y" -a "$keepFiles" != "N" \) -a \( "$keepFiles" != "y" -a "$keepFiles" != "n" \) ]
+do read -p "(2/3) Do you need to KEEP the files used for the compilation at the end of NetScript execution (to dig in the code) ? (Y/n) : " keepFiles
+done
+while [ \( "$keepOptNetSurf" != "Y" -a "$keepOptNetSurf" != "N" \) -a \( "$keepOptNetSurf" != "y" -a "$keepOptNetSurf" != "n" \) ]
+do read -p "(3/3) Do you want to KEEP the /opt/netsurf folder at the end of NetScript execution ? If you keep it, the future NetScript executions will be shorter. (Y/n) : " keepOptNetSurf
 done
 
-if [ "$duktape" = "Y" -o "$duktape" = "y" ]
+if [ "$compileWithDukTape" = "Y" -o "$compileWithDukTape" = "y" ]
 then 
 echo "                                               "
 echo "-----------------------------------------------"
-echo "  You choose to compile NetSurf WITH DukTape   "
+echo "   You chose to compile NetSurf WITH DukTape   "
 echo "-----------------------------------------------"
 echo "                                               "
 else
 echo "                                               "
 echo "-----------------------------------------------"
-echo " You choose to compile NetSurf WITHOUT DukTape "
+echo " You chose to compile NetSurf WITHOUT DukTape  "
 echo "-----------------------------------------------"
 echo "                                               "
 fi
 
-if [ "$deleteOptNetsurf" = "Y" -o "$deleteOptNetsurf" = "y" ]
+if [ "$keepFiles" = "Y" -o "$keepFiles" = "y" ]
 then 
 echo "                                               "
 echo "-----------------------------------------------"
-echo "  You choose to keep the /opt/netsurf folder   "
+echo "       You chose to KEEP the files after       "
+echo "            the NetScript Execution            "
+echo "-----------------------------------------------"
+echo "                                               "
+else
+echo "                                               "
+echo "-----------------------------------------------"
+echo "      You chose to DELETE the files after      "
+echo "            the NetScript Execution            "
+echo "-----------------------------------------------"
+echo "                                               "
+fi
+
+if [ "$keepOptNetSurf" = "Y" -o "$keepOptNetSurf" = "y" ]
+then 
+echo "                                               "
+echo "-----------------------------------------------"
+echo "   You chose to KEEP the /opt/netsurf folder   "
 echo "       at the end of NetScript execution       "
 echo "    for future shorter NetScript executions    "
 echo "-----------------------------------------------"
@@ -44,7 +64,7 @@ echo "                                               "
 else
 echo "                                               "
 echo "-----------------------------------------------"
-echo " You choose to delete the /opt/netsurf folder  "
+echo "  You chose to DELETE the /opt/netsurf folder  "
 echo "       at the end of NetScript execution       "
 echo " (future NetScript executions will be longer)  "
 echo "-----------------------------------------------"
@@ -189,19 +209,19 @@ cd netsurf/
 git pull
 make TARGET=amigaos3 PREFIX=/opt/netsurf/m68k-unknown-amigaos/env CC=m68k-unknown-amigaos-gcc clean
 
-if [ "$duktape" = "Y" -o "$duktape" = "y" ]
+if [ "$compileWithDukTape" = "Y" -o "$compileWithDukTape" = "y" ]
 then 
 echo "                                               "
 echo "-----------------------------------------------"
 echo "                   REMINDER                    "
-echo "  You choosed to compile NetSurf WITH DukTape  "
+echo "   You chose to compile NetSurf WITH DukTape   "
 echo "-----------------------------------------------"
 echo "                                               "
 else
 echo "                                               "
 echo "-----------------------------------------------"
 echo "                    REMINDER                   "
-echo " You choosed to compile NetSurf WITHOUT DukTape"
+echo "  You chose to compile NetSurf WITHOUT DukTape "
 echo "-----------------------------------------------"
 echo "                                               "
 echo override NETSURF_USE_DUKTAPE := NO >> Makefile.config.example
@@ -211,16 +231,35 @@ fi
 make TARGET=amigaos3 PREFIX=/opt/netsurf/m68k-unknown-amigaos/env CC=m68k-unknown-amigaos-gcc package
 mv NetSurf_Amiga/netsurf.tar ../NetSurf_3.6_AmigaOS3.tar
 cd ..
+
+if [ "$keepFiles" = "Y" -o "$keepFiles" = "y" ]
+then 
+echo "                                               "
+echo "-----------------------------------------------"
+echo "                    REMINDER                   "
+echo "       You chose to KEEP the files after       "
+echo "            the NetScript Execution            "
+echo "-----------------------------------------------"
+echo "                                               "
+else
+echo "                                               "
+echo "-----------------------------------------------"
+echo "                    REMINDER                   "
+echo "      You chose to DELETE the files after      "
+echo "            the NetScript Execution            "
+echo "-----------------------------------------------"
+echo "                                               "
 rm -Rf buildsystem libcss libdom libhubbub libnsbmp libnsgif libnsutils libparserutils libsvgtiny libutf8proc libwapcaplet nsgenbind toolchains
 rm -Rf netsurf/*
 rm -Rf netsurf
+fi
 
-if [ "$deleteOptNetsurf" = "Y" -o "$deleteOptNetsurf" = "y" ]
+if [ "$keepOptNetSurf" = "Y" -o "$keepOptNetSurf" = "y" ]
 then 
 echo "                                               "
 echo "-----------------------------------------------"
 echo "                   REMINDER                    "
-echo "  You choosed to KEEP the /opt/netsurf folder  "
+echo "   You chose to KEEP the /opt/netsurf folder   "
 echo "       at the end of NetScript execution       "
 echo "    for future shorter NetScript executions    "
 echo "-----------------------------------------------"
@@ -229,7 +268,7 @@ else
 echo "                                               "
 echo "-----------------------------------------------"
 echo "                   REMINDER                    "
-echo " You choosed to DELETE the /opt/netsurf folder "
+echo "  You chose to DELETE the /opt/netsurf folder  "
 echo "       at the end of NetScript execution       "
 echo " (future NetScript executions will be longer)  "
 echo "-----------------------------------------------"
@@ -241,7 +280,7 @@ echo "                                               "
 echo "-----------------------------------------------"
 echo "                      END                      "
 echo "     Your NetSurf Archive is available in :    "
-echo "$(PWD)"
+echo "  $(PWD)"
 echo "    And is called NetSurf_3.6_AmigaOS3.tar     "
 echo "                                               "
 echo "     Unpack it into a folder reachable by      "
