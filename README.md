@@ -2,8 +2,12 @@
 <em>A script to compile automatically NetSurf for AmigaOS3 (Cross-compilation Windows using Cygwin - AmigaOS3)</em>
 
 <h2>Important information</h2>
-To use NetScript, you need Cygwin installed into your computer with all the developer tools. A tutorial to install cygwin is available below.
-This version includes the choice to compile NetSurf with or without DukTape, as there are some issues with it.
+To use NetScript, you need Cygwin installed into your computer with all the developer tools. A tutorial to install cygwin is available below.<br/>
+NetScript includes the choice to compile NetSurf with or without DukTape, as there are some issues with it.<br/>
+You can also choose to keep the files needed to compile NetSurf, to dig in the code.<br/>
+
+<strong>If you only need to get NetSurf already compiled for AmigaOS3,</strong> you can download the NetSurf_XXX_AmigaOS3.tar only. 
+This version doesn't contain DukTape and might be obsolete. 
 
 <h2>How to use NetScript ?</h2>
 Here is the tutorial to make it work :

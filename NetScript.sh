@@ -229,7 +229,7 @@ cp Makefile.config.example Makefile.config
 fi
 
 make TARGET=amigaos3 PREFIX=/opt/netsurf/m68k-unknown-amigaos/env CC=m68k-unknown-amigaos-gcc package
-mv NetSurf_Amiga/netsurf.tar ../NetSurf_3.6_AmigaOS3.tar
+mv NetSurf_Amiga/netsurf.tar ../NetSurf_3.6dev_AmigaOS3.tar
 cd ..
 
 if [ "$keepFiles" = "Y" -o "$keepFiles" = "y" ]
