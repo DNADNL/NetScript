@@ -27,7 +27,7 @@ NetScript is composed of :
 	<li>NetScript.sh, the script to launch, which downloads, installs and compiles NetSurf ;</li>
 	<li>scriptFilesUpdate.sh, the script used to modify some files during the compilation to fit in Cygwin ;</li>
 	<li>the scriptUpdate folder, which goes with scriptFilesUpdate.sh and contains every file modification script ;</li>
-	<li>the dataFiles folder, which contains some resources and tools.</li>
+	<li><del>the dataFiles folder, which contains some resources and tools</del> OBSOLETE, this folder doesn't exist anymore since the 20160630-1 NetScript version.</li>
 </ul>
 <h2>How to install Cygwin ?</h2>
 Here is the tutorial to install cygwin correctly to be sure NetScript works :
