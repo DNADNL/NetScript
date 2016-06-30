@@ -1,5 +1,5 @@
 echo "-----------------------------------------------"
-echo "        Setup Script - Netsurf 3.6 dev         "
+echo "        NetScript for Netsurf 3.6 dev          "
 echo "Crossed Compilation Cygwin (Windows) - AmigaOS3"
 echo "                                               "
 echo "       Created by DNADNL, EyMenZ & Tygre       "
@@ -7,50 +7,70 @@ echo "                                               "
 echo "                A big thanks to                "
 echo "    Chris Young and the amiga.org forums !     "
 echo "                                               "
-echo "     *** Script Version : 20160627-2 ***       "
+echo "     *** Script Version : 20160630-1 ***       "
 echo "-----------------------------------------------"
 
 while [ \( "$duktape" != "Y" -a "$duktape" != "N" \) -a \( "$duktape" != "y" -a "$duktape" != "n" \) ]
-do read -p "Do you want to compile NetSurf with duktape ?(Y/N) : " duktape
+do read -p "(1/2) Do you want to compile NetSurf WITH duktape ?(Y/n) : " duktape
+done
+while [ \( "$deleteOptNetsurf" != "Y" -a "$deleteOptNetsurf" != "N" \) -a \( "$deleteOptNetsurf" != "y" -a "$deleteOptNetsurf" != "n" \) ]
+do read -p "(2/2) Do you want to KEEP the /opt/netsurf folder at the end of NetScript execution ? If you keep it, the future NetScript executions will be shorter. (Y/n) : " deleteOptNetsurf
 done
 
 if [ "$duktape" = "Y" -o "$duktape" = "y" ]
 then 
 echo "                                               "
 echo "-----------------------------------------------"
-echo "  You choosed to compile NetSurf WITH DukTape  "
+echo "  You choose to compile NetSurf WITH DukTape   "
 echo "-----------------------------------------------"
 echo "                                               "
 else
-echo "                                                "
-echo "------------------------------------------------"
-echo " You choosed to compile NetSurf WITHOUT DukTape "
-echo "------------------------------------------------"
-echo "                                                "
+echo "                                               "
+echo "-----------------------------------------------"
+echo " You choose to compile NetSurf WITHOUT DukTape "
+echo "-----------------------------------------------"
+echo "                                               "
 fi
 
-echo "Verifying gcc-tools... "
-if [ ! -d "/opt/gcc-tools" ]
-then
-	echo "gcc-tols don't exist. Copying gcc-tools... "
-	mkdir /opt/gcc-tools
-	cp -R dataFiles/gcc-tools/* /opt/gcc-tools/
-	echo "gcc-tools copied !"
+if [ "$deleteOptNetsurf" = "Y" -o "$deleteOptNetsurf" = "y" ]
+then 
+echo "                                               "
+echo "-----------------------------------------------"
+echo "  You choose to keep the /opt/netsurf folder   "
+echo "       at the end of NetScript execution       "
+echo "    for future shorter NetScript executions    "
+echo "-----------------------------------------------"
+echo "                                               "
 else
-	echo "gcc-tools already exist."
+echo "                                               "
+echo "-----------------------------------------------"
+echo " You choose to delete the /opt/netsurf folder  "
+echo "       at the end of NetScript execution       "
+echo " (future NetScript executions will be longer)  "
+echo "-----------------------------------------------"
+echo "                                               "
 fi
 
-git clone git://git.netsurf-browser.org/toolchains.git
-./scriptFilesUpdate.sh &
-cd toolchains/m68k-unknown-amigaos
-unlink /usr/bin/autom4te2.64
-ln -s /opt/gcc-tools/epoch2/bin/autom4te-2.64 /usr/bin/autom4te2.64
-make distclean
-make
-cd ../sdk
-make GCCSDK_INSTALL_CROSSBIN=/opt/netsurf/m68k-unknown-amigaos/cross/bin GCCSDK_INSTALL_ENV=/opt/netsurf/m68k-unknown-amigaos/env distclean
-make GCCSDK_INSTALL_CROSSBIN=/opt/netsurf/m68k-unknown-amigaos/cross/bin GCCSDK_INSTALL_ENV=/opt/netsurf/m68k-unknown-amigaos/env
-cd ../..
+echo "Verifying /opt/netsurf folder... "
+if [ ! -d "/opt/netsurf" ]
+then
+	echo "/opt/netsurf folder doesn't exist."
+	echo "NetScript is now going to download and compile the toolchains needed to create /opt/netsurf (the NetScript execution will be longer). "
+	git clone git://git.netsurf-browser.org/toolchains.git
+	./scriptFilesUpdate.sh toolchains &
+	cd toolchains/m68k-unknown-amigaos
+	unlink /usr/bin/autom4te2.64
+	ln -s /opt/gcc-tools/epoch2/bin/autom4te-2.64 /usr/bin/autom4te2.64
+	make distclean
+	make
+	cd ../sdk
+	make GCCSDK_INSTALL_CROSSBIN=/opt/netsurf/m68k-unknown-amigaos/cross/bin GCCSDK_INSTALL_ENV=/opt/netsurf/m68k-unknown-amigaos/env distclean
+	make GCCSDK_INSTALL_CROSSBIN=/opt/netsurf/m68k-unknown-amigaos/cross/bin GCCSDK_INSTALL_ENV=/opt/netsurf/m68k-unknown-amigaos/env
+	cd ../..
+else
+	echo "/opt/netsurf folder already exists."
+	echo "NetScript doesn't need to download and compile the toolchains (the NetScript execution will be shorter). "
+fi
 
 export PATH=/opt/netsurf/m68k-unknown-amigaos/cross/bin:$PATH
 export PKG_CONFIG_PATH=/opt/netsurf/m68k-unknown-amigaos/env/lib/pkgconfig:$PKG_CONFIG_PATH
@@ -164,6 +184,7 @@ unlink /usr/bin/nsgenbind
 ln -s $(PWD)/nsgenbind/build-i686-pc-cygwin-i686-pc-cygwin-release-binary/nsgenbind /usr/bin/nsgenbind
 
 git clone git://git.netsurf-browser.org/netsurf.git
+./scriptFilesUpdate.sh amiga &
 cd netsurf/
 git pull
 make TARGET=amigaos3 PREFIX=/opt/netsurf/m68k-unknown-amigaos/env CC=m68k-unknown-amigaos-gcc clean
@@ -177,16 +198,59 @@ echo "  You choosed to compile NetSurf WITH DukTape  "
 echo "-----------------------------------------------"
 echo "                                               "
 else
-echo "                                                "
-echo "------------------------------------------------"
-echo "                    REMINDER                    "
-echo " You choosed to compile NetSurf WITHOUT DukTape "
-echo "------------------------------------------------"
-echo "                                                "
+echo "                                               "
+echo "-----------------------------------------------"
+echo "                    REMINDER                   "
+echo " You choosed to compile NetSurf WITHOUT DukTape"
+echo "-----------------------------------------------"
+echo "                                               "
 echo override NETSURF_USE_DUKTAPE := NO >> Makefile.config.example
 cp Makefile.config.example Makefile.config
 fi
 
-make TARGET=amigaos3 PREFIX=/opt/netsurf/m68k-unknown-amigaos/env CC=m68k-unknown-amigaos-gcc 
+make TARGET=amigaos3 PREFIX=/opt/netsurf/m68k-unknown-amigaos/env CC=m68k-unknown-amigaos-gcc package
+mv NetSurf_Amiga/netsurf.tar ../NetSurf_3.6_AmigaOS3.tar
 cd ..
-cp -R dataFiles/resources/* netsurf/resources/
+rm -Rf buildsystem libcss libdom libhubbub libnsbmp libnsgif libnsutils libparserutils libsvgtiny libutf8proc libwapcaplet nsgenbind toolchains
+rm -Rf netsurf/*
+rm -Rf netsurf
+
+if [ "$deleteOptNetsurf" = "Y" -o "$deleteOptNetsurf" = "y" ]
+then 
+echo "                                               "
+echo "-----------------------------------------------"
+echo "                   REMINDER                    "
+echo "  You choosed to KEEP the /opt/netsurf folder  "
+echo "       at the end of NetScript execution       "
+echo "    for future shorter NetScript executions    "
+echo "-----------------------------------------------"
+echo "                                               "
+else
+echo "                                               "
+echo "-----------------------------------------------"
+echo "                   REMINDER                    "
+echo " You choosed to DELETE the /opt/netsurf folder "
+echo "       at the end of NetScript execution       "
+echo " (future NetScript executions will be longer)  "
+echo "-----------------------------------------------"
+echo "                                               "
+rm -Rf /opt/netsurf
+fi
+
+echo "                                               "
+echo "-----------------------------------------------"
+echo "                      END                      "
+echo "     Your NetSurf Archive is available in :    "
+echo "$(PWD)"
+echo "    And is called NetSurf_3.6_AmigaOS3.tar     "
+echo "                                               "
+echo "     Unpack it into a folder reachable by      "
+echo "      your AmigaOS3 and then install it.       "
+echo "(LHA Archive Format is not supported by Cygwin,"
+echo "         sorry for the inconvenience)          "
+echo "                                               "
+echo "         Thanks for using NetScript !          "
+echo "-----------------------------------------------"
+echo "                                               "
+
+
