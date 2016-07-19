@@ -16,9 +16,10 @@ Here is the tutorial to make it work :
 	<li>Download the ZIP archive from the branch you want by selecting the branch, <br/>
 	then clicking the "Clone or download" button, then "Download ZIP".<br/>
 	You can <a href="https://github.com/DNADNL/NetScript/archive/master.zip">download the files from the master branch</a> by clicking this link.</li>
+	<li>Open Cygwin. This will create automatically your personal directory. ;</li>
 	<li>Extract the ZIP archive into a folder located in your personal directory ; <br/>
 	<em>If you don`t change the cygwin install directory, it`s probably C:\cygwin\home\*Name of your windows session*</em></li>
-	<li>Open Cygwin and Move to the directory containing the files (via the cd command) ;</li>
+	<li>On your Cygwin window, Move to the directory containing the files (via the cd command) ;</li>
 	<li>Use this command to start NetScript : ./NetScript.sh ;</li>
 </ol>
 <h2>What does NetScript contains ?</h2>
@@ -40,11 +41,12 @@ Here is the tutorial to install cygwin correctly to be sure NetScript works :
 	<li>You can let the default Local Package Directory as is (or change it if you need). Click "Next" ;</li>
 	<li>Select "Direct connection", then click "Next" ;</li>
 	<li>Select the available download site you want (for example, "http://cygwin.mirror.constant.com"), then click "Next". Cygwin downloads some packages... ;</li>
-	<li>Look for the "Devel" row and click on the double-arrow drawing on it to display the word "Install" instead of "Default" next to it. Click "Next" ;</li>
-	<li>If a "Resolving Dependencies" window appears, tick the "Select Required Packages" box, then click "Next". The cygwin setup should be launched...</li>
+	<li>You can let the "Default" installation on every row as is (or change it if you need). Click "Next" ;</li>
+	<li>If a "Resolving Dependencies" window appears, verify the "Select Required Packages" box is checked, then click "Next". The cygwin setup should be launched and won't last too long...</li>
+	<li>At the end of the installation, you can check the "Create icon on Desktop" and/or the "Add icon to Start Menu" boxes if you want, finally click "Finish". Cygwin should be installed properly !</li>
 </ol>
 <strong>Thank you for using NetScript !</strong><br/>
 <em>Please give credits when you use NetScript.</em>
 
-<em>*** Readme Version : 20160630-2 ***</em>
+<em>*** Readme Version : 20160719-1 ***</em>
 
