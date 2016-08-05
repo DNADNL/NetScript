@@ -11,7 +11,7 @@ echo "               A big thanks to :               "
 echo "          Chris Young, transcode-open          "
 echo "           and the amiga.org forums !          "
 echo "                                               "
-echo "     *** Script Version : 20160719-1 ***       "
+echo "     *** Script Version : 20160805-1 ***       "
 echo "-----------------------------------------------"
 
 while [ \( "$compileWithDukTape" != "Y" -a "$compileWithDukTape" != "N" \) -a \( "$compileWithDukTape" != "y" -a "$compileWithDukTape" != "n" \) ]
@@ -101,8 +101,8 @@ echo "Installing Cygwin tools..."
 
 lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
 install apt-cyg /bin
-rm apt-cyg
 apt-cyg install wget git make patch pkg-config apache2 python subversion gperf flex bison autoconf gcc-g++ gcc-tools-epoch2-automake libidn-devel kde-dev-scripts
+rm apt-cyg
 
 echo "Cygwin tools installed !"
 
