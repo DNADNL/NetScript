@@ -7,7 +7,7 @@ To use NetScript, you need Cygwin installed into your computer. A tutorial to in
 NetScript includes the choice to compile NetSurf with or without DukTape, as there are some issues with it.<br/>
 You can also choose to keep the files needed to compile NetSurf, to dig in the code.<br/>
 
-<strong>If you only need to get NetSurf already compiled for AmigaOS3,</strong> you can <a href="https://github.com/DNADNL/NetScript/raw/master/NetSurf_3.6dev_AmigaOS3.tar">download the NetSurf_XXX_AmigaOS3.tar only</a>. 
+<strong>If you only need to get NetSurf already compiled for AmigaOS3,</strong> you can <a href="https://github.com/DNADNL/NetScript/raw/master/NetSurf_3.6dev_AmigaOS3_2016-08-05.tar">download the NetSurf_XXX_AmigaOS3_CompilationDate.tar only</a>. 
 This version doesn't contain DukTape and might be obsolete as it isn't updated every day. 
 
 <h2>How to use NetScript ?</h2>
