@@ -10,6 +10,7 @@ You can also choose to keep the files needed to compile NetSurf, to dig in the c
 Since the 20160808-1 version, it is possible to execute NetScript in QUICK MODE.<br/>
 This mode only compiles the netsurf folder (useful for those who often modify or debug it).<br/>
 You need to use NetScript normally at least once to be able to use the QUICK MODE.<br/>
+This version is also more dev-friendly : as a developer, you can compile NetSurf easily with your files modification.<br/>
 
 <strong>If you only need to get NetSurf already compiled for AmigaOS3,</strong> you can <a href="https://github.com/DNADNL/NetScript/raw/master/NetSurf_3.6dev_AmigaOS3_2016-08-05.tar">download the NetSurf_XXX_AmigaOS3_CompilationDate.tar only</a>. 
 This version doesn't contain DukTape and might be obsolete as it isn't updated every day. 
@@ -27,7 +28,7 @@ Here is the tutorial to make it work :
 	<li>On your Cygwin window, Move to the directory containing the files (via the cd command) ;</li>
 	<li>Use this command between the quotation marks to start NetScript : "./NetScript.sh". <br/>
 	If you want to use the QUICK MODE, use this command "./NetScript.sh -q" or this one "./NetScript.sh --quick".<br/>
-	<em>Please see Important Information part before</em></li>
+	<em>Please see the "Important Information" part before</em></li>
 </ol>
 
 <h2>What does NetScript contains ?</h2>
@@ -57,5 +58,5 @@ Here is the tutorial to install cygwin correctly to be sure NetScript works :
 <strong>Thank you for using NetScript !</strong><br/>
 <em>Please give credits when you use NetScript.</em>
 
-<em>*** Readme Version : 20160808-1 ***</em>
+<em>*** Readme Version : 20160808-2 ***</em>
 
