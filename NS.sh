@@ -490,6 +490,8 @@ then
 			echo "   You chose to compile NetSurf WITH DukTape   "
 			echo "-----------------------------------------------"
 			echo "                                               "
+			echo override NETSURF_USE_DUKTAPE := YES >> Makefile.config.example
+			cp Makefile.config.example Makefile.config
 		else
 			echo "                                               "
 			echo "-----------------------------------------------"
@@ -730,6 +732,8 @@ else
 			echo "   You chose to compile NetSurf WITH DukTape   "
 			echo "-----------------------------------------------"
 			echo "                                               "
+			echo override NETSURF_USE_DUKTAPE := YES >> Makefile.config.example
+			cp Makefile.config.example Makefile.config
 		else
 			echo "                                               "
 			echo "-----------------------------------------------"
