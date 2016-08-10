@@ -1,5 +1,5 @@
 NETSURF_VERSION="3.6dev"
-NETSCRIPT_DATE="20160808-1" 
+NETSCRIPT_DATE="20160810-1" 
 
 if [ ! \( "$1" = "-q" -o "$1" = "--quick" \) ]
 then
