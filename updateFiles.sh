@@ -9,7 +9,7 @@ then
 	done
 	echo " m68k-unknown-amigaos/Makefile found !"
 
-	sed -f scriptUpdate/scriptUpdate_m68k-unknown-amigaos_Makefile.sed toolchains/m68k-unknown-amigaos/Makefile > toolchains/m68k-unknown-amigaos/MakefileNEW
+	sed -f updateFile/updateFile_m68k-unknown-amigaos_Makefile.sed toolchains/m68k-unknown-amigaos/Makefile > toolchains/m68k-unknown-amigaos/MakefileNEW
 	cp toolchains/m68k-unknown-amigaos/MakefileNEW toolchains/m68k-unknown-amigaos/Makefile
 	rm toolchains/m68k-unknown-amigaos/MakefileNEW
 
@@ -27,7 +27,7 @@ then
 	done
 	echo " sdk/Makefile found !"
 
-	sed -f scriptUpdate/scriptUpdate_sdk_Makefile.sed toolchains/sdk/Makefile > toolchains/sdk/MakefileNEW
+	sed -f updateFile/updateFile_sdk_Makefile.sed toolchains/sdk/Makefile > toolchains/sdk/MakefileNEW
 	cp toolchains/sdk/MakefileNEW toolchains/sdk/Makefile
 	rm toolchains/sdk/MakefileNEW
 
@@ -45,7 +45,7 @@ then
 	done
 	echo " c-parse.in found !"
 
-	sed -f scriptUpdate/scriptUpdate_c-parse.in.sed toolchains/m68k-unknown-amigaos/gcc-3.4.6/gcc/c-parse.in > toolchains/m68k-unknown-amigaos/gcc-3.4.6/gcc/c-parseNEW.in
+	sed -f updateFile/updateFile_c-parse.in.sed toolchains/m68k-unknown-amigaos/gcc-3.4.6/gcc/c-parse.in > toolchains/m68k-unknown-amigaos/gcc-3.4.6/gcc/c-parseNEW.in
 	cp toolchains/m68k-unknown-amigaos/gcc-3.4.6/gcc/c-parseNEW.in toolchains/m68k-unknown-amigaos/gcc-3.4.6/gcc/c-parse.in
 	rm toolchains/m68k-unknown-amigaos/gcc-3.4.6/gcc/c-parseNEW.in
 
@@ -64,7 +64,7 @@ then
 	done
 	echo " collect2.c found !"
 
-	sed -f scriptUpdate/scriptUpdate_collect2.c.sed toolchains/m68k-unknown-amigaos/gcc-3.4.6/gcc/collect2.c > toolchains/m68k-unknown-amigaos/gcc-3.4.6/gcc/collect2NEW.c
+	sed -f updateFile/updateFile_collect2.c.sed toolchains/m68k-unknown-amigaos/gcc-3.4.6/gcc/collect2.c > toolchains/m68k-unknown-amigaos/gcc-3.4.6/gcc/collect2NEW.c
 	cp toolchains/m68k-unknown-amigaos/gcc-3.4.6/gcc/collect2NEW.c toolchains/m68k-unknown-amigaos/gcc-3.4.6/gcc/collect2.c
 	rm toolchains/m68k-unknown-amigaos/gcc-3.4.6/gcc/collect2NEW.c
 
@@ -79,7 +79,7 @@ then
 	done
 	echo " frontends/amiga/Makefile found !"
 
-	sed -f scriptUpdate/scriptUpdate_frontends_amiga_Makefile.sed netsurf/frontends/amiga/Makefile > netsurf/frontends/amiga/MakefileNEW
+	sed -f updateFile/updateFile_frontends_amiga_Makefile.sed netsurf/frontends/amiga/Makefile > netsurf/frontends/amiga/MakefileNEW
 	cp netsurf/frontends/amiga/MakefileNEW netsurf/frontends/amiga/Makefile
 	rm netsurf/frontends/amiga/MakefileNEW
 

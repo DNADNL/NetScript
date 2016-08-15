@@ -1,5 +1,5 @@
 NETSURF_VERSION="3.6dev"
-NETSCRIPT_DATE="20160810-1" 
+NETSCRIPT_DATE="20160814-1" 
 
 if [ ! \( "$1" = "-q" -o "$1" = "--quick" \) ]
 then
@@ -156,7 +156,7 @@ then
 		echo "/opt/netsurf folder doesn't exist."
 		echo "NetScript is now going to download and compile the toolchains needed to create /opt/netsurf (the NetScript execution will be longer). "
 		git clone git://git.netsurf-browser.org/toolchains.git
-		./scriptFilesUpdate.sh toolchains &
+		./updateFiles.sh toolchains &
 		cd toolchains/m68k-unknown-amigaos
 		unlink /usr/bin/autom4te2.64
 		ln -s /opt/gcc-tools/epoch2/bin/autom4te-2.64 /usr/bin/autom4te2.64
@@ -473,7 +473,7 @@ then
 	then
 		echo "netsurf folder doesn't exist. Downloading the fresh one..."
 		git clone git://git.netsurf-browser.org/netsurf.git
-		./scriptFilesUpdate.sh amiga &
+		./updateFiles.sh amiga &
 		cd netsurf
 		git pull
 		make TARGET=amigaos3 PREFIX=/opt/netsurf/m68k-unknown-amigaos/env CC=m68k-unknown-amigaos-gcc clean

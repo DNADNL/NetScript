@@ -36,8 +36,8 @@ NetScript is composed of :
 <ul>
 	<li>NetScript.sh, the script to launch, which creates the LOG file, useful if you reach the bad ending </em>(since the 20160808-1 version)</em> ;</li>
 	<li>NS.sh, the script which downloads, installs and compiles NetSurf </em>(since the 20160808-1 version)</em> ;</li>
-	<li>scriptFilesUpdate.sh, the script used to modify some files during the compilation to fit in Cygwin ;</li>
-	<li>the scriptUpdate folder, which goes with scriptFilesUpdate.sh and contains every file modification script ;</li>
+	<li>updateFiles.sh, the script used to modify some files during the compilation to fit in Cygwin ;</li>
+	<li>the updateFile folder, which goes with scriptFilesUpdate.sh and contains every file modification script ;</li>
 </ul>
 
 <h2>How to install Cygwin ?</h2>
@@ -58,5 +58,5 @@ Here is the tutorial to install cygwin correctly to be sure NetScript works :
 <strong>Thank you for using NetScript !</strong><br/>
 <em>Please give credits when you use NetScript.</em>
 
-<em>*** Readme Version : 20160808-2 ***</em>
+<em>*** Readme Version : 20160814-1 ***</em>
 
